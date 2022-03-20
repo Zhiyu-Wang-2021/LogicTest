@@ -7,7 +7,7 @@
       </el-select>
     </el-form-item>
     <el-form-item label="Your Question">
-      <el-input v-model="form.content" type="textarea" />
+      <el-input v-model="form.content" type="textarea" data="newQuestion" />
     </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="onSubmit">Create</el-button>
@@ -18,7 +18,7 @@
 
 <script setup>
 import { reactive } from "vue";
-import fs from "fs";
+import router from "../router";
 
 // do not use same name with ref
 const form = reactive({
@@ -32,7 +32,12 @@ const onSubmit = () => {
     content: form.content,
   };
   console.log(question);
-
+  const prevQuestions = JSON.parse(localStorage.getItem("questions"));
+  localStorage.setItem(
+    "questions",
+    JSON.stringify([question].concat(prevQuestions))
+  );
+  router.back();
 };
 </script>
 
