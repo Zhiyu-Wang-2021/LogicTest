@@ -1,0 +1,7 @@
+{
+  "name": "VueTest",
+  "version": "1.0.0",
+  "dependencies": {
+    "vue-router": "^4.0.14"
+  }
+}
