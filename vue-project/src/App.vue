@@ -20,6 +20,6 @@ import NavMenu from "./components/NavMenu.vue";
 <style>
 @import "@/assets/base.css";
 .router-view {
-  margin: 50px;
+  margin: 150px 50px 50px;
 }
 </style>

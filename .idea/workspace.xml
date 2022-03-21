@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6fb0afb-e54f-4abd-b59f-e38f7708e3ee" name="Changes" comment="demo">
+    <list default="true" id="a6fb0afb-e54f-4abd-b59f-e38f7708e3ee" name="Changes" comment="local storage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/database/judgementQuestions.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/database/judgementQuestions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-project/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-project/src/components/NavMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/components/NavMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/src/views/NewQuestion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/NewQuestion.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/src/views/QuestionList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/QuestionList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,9 @@
       <workItem from="1647748202154" duration="1711000" />
       <workItem from="1647750089431" duration="98000" />
       <workItem from="1647750220316" duration="6641000" />
-      <workItem from="1647794181989" duration="11205000" />
+      <workItem from="1647794181989" duration="14362000" />
+      <workItem from="1647869312474" duration="2360000" />
+      <workItem from="1647871978354" duration="2208000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1647756312330</created>
@@ -96,11 +96,36 @@
       <option name="project" value="LOCAL" />
       <updated>1647756312330</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="local storage">
+      <created>1647818017112</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647818017112</updated>
+    </task>
+    <task id="LOCAL-00003" summary="local storage">
+      <created>1647818041156</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647818041156</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -115,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="demo" />
+    <MESSAGE value="local storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="local storage" />
   </component>
 </project>

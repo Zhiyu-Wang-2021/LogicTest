@@ -1,27 +1,27 @@
 <template>
-  <el-button type="warning" @click="$router.push({ name: 'newQuestion' })">
-    New Question
-  </el-button>
-  <el-button
-    type="warning"
-    @click="localStorage.setItem('questions', JSON.stringify([]))"
-  >
-    New Question
-  </el-button>
-  <h1>question list</h1>
-  <ul v-infinite-scroll="load" class="infinite-list" style="overflow: auto">
-    <li v-for="i in questions" :key="i" class="infinite-list-item">{{ i }}</li>
-  </ul>
+  <div class="container">
+    <el-table :data="questions" style="width: 100%" max-height="850">
+      <el-table-column fixed prop="content" label="Question List" width="600" />
+      <el-table-column fixed="right" label="" width="120">
+        <template #default="scope">
+          <el-button
+            type="text"
+            size="small"
+            @click.prevent="deleteQuestion(scope.$index)"
+          >
+            Remove
+          </el-button>
+        </template>
+      </el-table-column>
+    </el-table>
+    <el-button
+      class="mt-4"
+      style="width: 100%"
+      @click="$router.push({ name: 'newQuestion' })"
+      >Add Question</el-button
+    >
+  </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-
-const count = ref(0);
-const load = () => {
-  count.value += 2;
-};
-</script>
 
 <script>
 export default {
@@ -33,15 +33,45 @@ export default {
   },
   mounted() {
     console.log("mounting...");
-    if (localStorage.getItem("questions")) {
-      this.questions = JSON.parse(localStorage.getItem("questions"));
+    try {
+      if (localStorage.getItem("questions")) {
+        this.questions = JSON.parse(localStorage.getItem("questions"));
+      }
+    } catch (e) {
+      console.log(e.message);
     }
     console.log(this.questions);
+  },
+  methods: {
+    deleteQuestion(questionIndex) {
+      console.log(questionIndex);
+      try {
+        let prevQuestions = [];
+        if (localStorage.getItem("questions")) {
+          prevQuestions = JSON.parse(localStorage.getItem("questions"));
+        }
+        console.log("prevQuestions");
+        console.log(prevQuestions);
+        console.log("deleting...");
+        const currQuestions = prevQuestions.filter(
+          (q, i) => i !== questionIndex
+        );
+        localStorage.setItem("questions", JSON.stringify(currQuestions));
+        console.log("deleted");
+        this.questions = currQuestions;
+      } catch (e) {
+        console.log(e.message);
+      }
+    },
   },
 };
 </script>
 
 <style>
+.container {
+  max-width: 720px;
+  margin: auto;
+}
 .infinite-list {
   height: 300px;
   padding: 0;
