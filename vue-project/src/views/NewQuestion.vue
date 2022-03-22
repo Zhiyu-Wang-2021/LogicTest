@@ -18,6 +18,14 @@
         <el-button @click="$router.back()">Cancel</el-button>
       </el-form-item>
     </el-form>
+    <h2>Hint:</h2>
+    <ul>
+      <li>-&gt; means →</li>
+      <li>&lt;-&gt; means ↔</li>
+      <li>\/ means ∨</li>
+      <li>/\ means ∧</li>
+      <li>! means ¬</li>
+    </ul>
   </div>
 </template>
 
