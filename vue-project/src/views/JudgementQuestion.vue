@@ -6,11 +6,11 @@
         :content="this.currQuestionContent"
       />
       <div class="answerArea">
-      <h2>Answer:</h2>
-      <h2>{{ this.answer }}</h2>
-      <el-button type="success" @click="feedback(true)">True</el-button>
-      <el-button type="danger" @click="feedback(false)">False</el-button>
-    </div>
+        <h2>Answer:</h2>
+        <h2>{{ this.answer }}</h2>
+        <el-button type="success" @click="feedback(true)">True</el-button>
+        <el-button type="danger" @click="feedback(false)">False</el-button>
+      </div>
     </div>
     <div v-else-if="this.questions.length > 0">
       <ResultProgressBar
@@ -30,7 +30,7 @@ import QuestionCard from "../components/QuestionCard.vue";
 import ResultProgressBar from "../components/ResultProgressBar.vue";
 </script>
 <script>
-import { ElMessageBox, ElMessage } from "element-plus";
+import { ElMessageBox, ElMessage, ElNotification } from "element-plus";
 import router from "../router";
 import returnRandomAnswer from "../scripts/randomAnswer";
 
@@ -128,7 +128,17 @@ export default {
     },
     errFeedback() {
       if (this.questionIndex < this.qPerPractice) {
-        ElMessage.error(`Wrong. Correct answer: ${this.questions[this.questionIndex].answer} (${this.correctCount}/${this.questionIndex + 1})`);
+        ElMessage.error(
+          `Wrong. Correct answer: ${
+            this.questions[this.questionIndex].answer
+          } (${this.correctCount}/${this.questionIndex + 1})`
+        );
+        ElNotification({
+          title: this.questions[this.questionIndex].content,
+          message: `The correct answer is ${this.questions[this.questionIndex].answer}`,
+          duration: 0,
+          type: "error",
+        });
         this.renderValues();
         this.nextQuestion();
       }
@@ -165,13 +175,10 @@ export default {
 </script>
 
 <style scoped>
-.container{
-   position: absolute;
-    left: 50%;
-    top:40%;
-    transform: translate(-50%,-50%);
-
-
-
+.container {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
 }
 </style>
