@@ -19,9 +19,6 @@
             <el-menu-item index="2-2" @click="$router.push({ name: 'multipleChoice' })">
               Multiple Choice
             </el-menu-item>
-          <el-menu-item index="2-3" @click="$router.push({ name: 'completion' })">
-            Completion Question
-          </el-menu-item>
         </el-sub-menu>
         <el-menu-item index="3" @click="$router.push({ name: 'questionList' })">
           Question Database

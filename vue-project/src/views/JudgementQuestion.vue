@@ -6,7 +6,6 @@
         :content="this.currQuestionContent"
       />
       <div class="answerArea">
-<<<<<<< HEAD
       <h2>Equivalence:</h2>
       <h2>{{ this.answer }}</h2>
       </div>
@@ -14,13 +13,6 @@
       <el-button type="success" @click="feedback(true)">True</el-button>
       <el-button type="danger" @click="feedback(false)">False</el-button>
     </div>
-=======
-        <h2>Answer:</h2>
-        <h2>{{ this.answer }}</h2>
-        <el-button type="success" @click="feedback(true)">True</el-button>
-        <el-button type="danger" @click="feedback(false)">False</el-button>
-      </div>
->>>>>>> 661f54c7ae7a2d61c1fb7ad4fad674c11c7f593e
     </div>
     <div v-else-if="this.questions.length > 0">
       <ResultProgressBar
@@ -185,14 +177,15 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 .container{
+   flex-direction: row ;
   display:flex;
   justify-content:center;  
   align-items:center; 
 }
     
 .answerArea{
+  
   width:400px;
   margin: 0 auto;
   background-color: #ff0000;
@@ -206,12 +199,5 @@ export default {
   left: 50%;
   transform: translate(-50%,270%);
   background-color: #ffffff;
-=======
-.container {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
->>>>>>> 661f54c7ae7a2d61c1fb7ad4fad674c11c7f593e
 }
 </style>

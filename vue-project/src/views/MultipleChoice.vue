@@ -5,12 +5,12 @@
         :num="this.questionIndex + 1"
         :content="this.currQuestionContent"
       />
-      <h2>Answer:</h2>
-      <ul>
-        <li v-for="(answer, index) in this.answers" :key="answer">
-          <el-button @click="feedback(index)">{{ answer }}</el-button>
-        </li>
-      </ul>
+      <div class="options" >
+        <div v-for="(answer, index) in this.answers" :key="answer">
+          <div class="button"> <el-button  size="large" @click="feedback(index)" type="primary" plain>{{ answer }}</el-button>
+          </div>
+        </div>
+   </div>
     </div>
     <div v-else-if="this.questions.length > 0">
       <ResultProgressBar
@@ -179,7 +179,28 @@ export default {
 
 <style scoped>
 .container {
+     
+  display:flex;
+  flex-direction: row ;
+  justify-content:center;  
+
   max-width: 400px;
   margin: auto;
 }
+.options{
+  display: table;
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 200px;
+  background-color: #ffffff;
+}
+.button{
+  width:100%;
+  background-color: #ffffff;
+}
+
+
 </style>
