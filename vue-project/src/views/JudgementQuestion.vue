@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-if="!this.completed && this.questions.length > 0">
+    <div v-if="!this.completed && this.questions.length > 0"  align="center">
       <QuestionCard
         :num="this.questionIndex + 1"
         :content="this.currQuestionContent"
@@ -180,17 +180,16 @@ export default {
 
 <style scoped>
 .container{
-   flex-direction: row ;
-  display:flex;
+   display:flex;
+  flex-direction: row ;
   justify-content:center;  
-  align-items:center; 
+  max-width: 400px;
+  margin: auto;
 }
     
 .answerArea{
-  
-  width:400px;
   margin: 0 auto;
-  background-color: #ff0000;
+  background-color: #ffffff;
   }
 
 .buttons{
