@@ -1,3 +1,23 @@
+function checkExistedVars(answer) {
+  let varArray = [];
+  for (let i = 0; i < answer.length; i++) {
+    if (
+      answer.charAt(i) !== "∧" &&
+      answer.charAt(i) !== "∨" &&
+      answer.charAt(i) !== "→" &&
+      answer.charAt(i) !== "↔" &&
+      answer.charAt(i) !== "(" &&
+      answer.charAt(i) !== ")" &&
+      answer.charAt(i) !== "¬"
+    ) {
+      if (varArray.includes(answer.charAt(i)) === false) {
+        varArray[varArray.length] = answer.charAt(i);
+      }
+    }
+  }
+  return varArray;
+}
+
 function createNewStringRandomAnswer(myString, i, replaceItem) {
   let temp = "";
   for (let j = 0; j < myString.length; j++) {
@@ -11,27 +31,56 @@ function createNewStringRandomAnswer(myString, i, replaceItem) {
 }
 
 function getRandomAnswer(originalAnswer) {
-  let answer = originalAnswer;
+  let existedVars = checkExistedVars(originalAnswer);
   let randomNum = Math.floor(Math.random() * 2);
+  if (existedVars.length === 1) {
+    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    randomNum = Math.floor(Math.random() * characters.length);
+    return characters.charAt(randomNum);
+  }
+  let answer = originalAnswer;
+  randomNum = Math.floor(Math.random() * 2);
   if (randomNum === 0 && answer.includes("¬")) {
     answer = answer.replace("¬", "");
   } else {
-    for (let i = 0; i < answer.length; i++) {
-      if (
-        answer.charAt(i) === "∧" ||
-        answer.charAt(i) === "∨" ||
-        answer.charAt(i) === "→" ||
-        answer.charAt(i) === "↔"
-      ) {
-        randomNum = Math.floor(Math.random() * 4);
-        if (randomNum === 0) {
-          answer = createNewStringRandomAnswer(answer, i, "∧");
-        } else if (randomNum === 1) {
-          answer = createNewStringRandomAnswer(answer, i, "∨");
-        } else if (randomNum === 2) {
-          answer = createNewStringRandomAnswer(answer, i, "→");
-        } else {
-          answer = createNewStringRandomAnswer(answer, i, "↔");
+    randomNum = Math.floor(Math.random() * 2);
+    if (randomNum === 0) {
+      for (let i = 0; i < answer.length; i++) {
+        if (
+          answer.charAt(i) !== "∧" &&
+          answer.charAt(i) !== "∨" &&
+          answer.charAt(i) !== "→" &&
+          answer.charAt(i) !== "↔" &&
+          answer.charAt(i) !== "(" &&
+          answer.charAt(i) !== ")" &&
+          answer.charAt(i) !== "¬"
+        ) {
+          randomNum = Math.floor(Math.random() * existedVars.length);
+          answer = createNewStringRandomAnswer(
+            answer,
+            i,
+            existedVars[randomNum]
+          );
+        }
+      }
+    } else {
+      for (let i = 0; i < answer.length; i++) {
+        if (
+          answer.charAt(i) === "∧" ||
+          answer.charAt(i) === "∨" ||
+          answer.charAt(i) === "→" ||
+          answer.charAt(i) === "↔"
+        ) {
+          randomNum = Math.floor(Math.random() * 4);
+          if (randomNum === 0) {
+            answer = createNewStringRandomAnswer(answer, i, "∧");
+          } else if (randomNum === 1) {
+            answer = createNewStringRandomAnswer(answer, i, "∨");
+          } else if (randomNum === 2) {
+            answer = createNewStringRandomAnswer(answer, i, "→");
+          } else {
+            answer = createNewStringRandomAnswer(answer, i, "↔");
+          }
         }
       }
     }
@@ -39,8 +88,9 @@ function getRandomAnswer(originalAnswer) {
   return answer;
 }
 
-//This function returns an array of three answer which are different
+//This function returns an array of "amount" number of answers which are different
 //from each other and are different from the original answer
+
 export default function returnRandomAnswer(answer, amount) {
   let randomAnswers = [];
   let newAnswer = "";
@@ -54,7 +104,10 @@ export default function returnRandomAnswer(answer, amount) {
       pass = true;
       newAnswer = getRandomAnswer(answer);
       for (let i = 0; i < randomAnswers.length; i++) {
-        if (count <= maxCount && (randomAnswers[i] === newAnswer || answer === newAnswer)) {
+        if (
+          count <= maxCount &&
+          (randomAnswers[i] === newAnswer || answer === newAnswer)
+        ) {
           pass = false;
           break;
         }
