@@ -30,7 +30,7 @@ import QuestionCard from "../components/QuestionCard.vue";
 import ResultProgressBar from "../components/ResultProgressBar.vue";
 </script>
 <script>
-import { ElMessageBox, ElMessage } from "element-plus";
+import { ElMessageBox, ElMessage, ElNotification } from "element-plus";
 import router from "../router";
 import returnRandomAnswer from "../scripts/randomAnswer";
 
@@ -108,11 +108,11 @@ export default {
           this.questions[this.questionIndex].answer;
       }
     },
-    feedback(yourAns) {
-      if (yourAns === this.correctIndex) {
+    feedback(yourAnsIndex) {
+      if (yourAnsIndex === this.correctIndex) {
         this.corrFeedback();
       } else {
-        this.errFeedback();
+        this.errFeedback(yourAnsIndex);
       }
     },
     corrFeedback() {
@@ -125,9 +125,23 @@ export default {
         this.nextQuestion();
       }
     },
-    errFeedback() {
+    errFeedback(yourAnsIndex) {
       if (this.questionIndex < this.qPerPractice) {
-        ElMessage.error(`Wrong. Correct answer: ${this.questions[this.questionIndex].answer} (${this.correctCount}/${this.questionIndex + 1})`);
+        ElMessage.error(
+          `Wrong. Correct answer: ${
+            this.questions[this.questionIndex].answer
+          } (${this.correctCount}/${this.questionIndex + 1})`
+        );
+        ElNotification({
+          title: this.questions[this.questionIndex].content,
+          message: `The correct answer is ${
+            this.questions[this.questionIndex].answer
+          } but your answer is ${
+            this.answers[yourAnsIndex]
+          }`,
+          duration: 0,
+          type: "error",
+        });
         this.renderValues();
         this.nextQuestion();
       }

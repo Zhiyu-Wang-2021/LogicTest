@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6fb0afb-e54f-4abd-b59f-e38f7708e3ee" name="Changes" comment="修复选项重复的bug&#10;&#10;增加settings">
+    <list default="true" id="a6fb0afb-e54f-4abd-b59f-e38f7708e3ee" name="Changes" comment="help/home page内容完成&#10;增加显示答案">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/components/ResultProgressBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/components/ResultProgressBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/src/scripts/randomAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/scripts/randomAnswer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/views/Help.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/Help.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/HomeView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/src/views/MultipleChoice.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/MultipleChoice.vue" afterDir="false" />
     </list>
@@ -151,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647954873338</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="help/home page内容完成&#10;增加显示答案">
+      <created>1647967713773</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647967713773</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +189,7 @@
     <MESSAGE value="change scroll to table&#10;allow deleting questions" />
     <MESSAGE value="自动转换数学符号" />
     <MESSAGE value="修复选项重复的bug&#10;&#10;增加settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复选项重复的bug&#10;&#10;增加settings" />
+    <MESSAGE value="help/home page内容完成&#10;增加显示答案" />
+    <option name="LAST_COMMIT_MESSAGE" value="help/home page内容完成&#10;增加显示答案" />
   </component>
 </project>

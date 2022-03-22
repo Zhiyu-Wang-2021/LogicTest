@@ -6,6 +6,7 @@
         :content="this.currQuestionContent"
       />
       <div class="answerArea">
+<<<<<<< HEAD
       <h2>Equivalence:</h2>
       <h2>{{ this.answer }}</h2>
       </div>
@@ -13,6 +14,13 @@
       <el-button type="success" @click="feedback(true)">True</el-button>
       <el-button type="danger" @click="feedback(false)">False</el-button>
     </div>
+=======
+        <h2>Answer:</h2>
+        <h2>{{ this.answer }}</h2>
+        <el-button type="success" @click="feedback(true)">True</el-button>
+        <el-button type="danger" @click="feedback(false)">False</el-button>
+      </div>
+>>>>>>> 661f54c7ae7a2d61c1fb7ad4fad674c11c7f593e
     </div>
     <div v-else-if="this.questions.length > 0">
       <ResultProgressBar
@@ -32,7 +40,7 @@ import QuestionCard from "../components/QuestionCard.vue";
 import ResultProgressBar from "../components/ResultProgressBar.vue";
 </script>
 <script>
-import { ElMessageBox, ElMessage } from "element-plus";
+import { ElMessageBox, ElMessage, ElNotification } from "element-plus";
 import router from "../router";
 import returnRandomAnswer from "../scripts/randomAnswer";
 
@@ -130,7 +138,17 @@ export default {
     },
     errFeedback() {
       if (this.questionIndex < this.qPerPractice) {
-        ElMessage.error(`Wrong. Correct answer: ${this.questions[this.questionIndex].answer} (${this.correctCount}/${this.questionIndex + 1})`);
+        ElMessage.error(
+          `Wrong. Correct answer: ${
+            this.questions[this.questionIndex].answer
+          } (${this.correctCount}/${this.questionIndex + 1})`
+        );
+        ElNotification({
+          title: this.questions[this.questionIndex].content,
+          message: `The correct answer is ${this.questions[this.questionIndex].answer}`,
+          duration: 0,
+          type: "error",
+        });
         this.renderValues();
         this.nextQuestion();
       }
@@ -167,6 +185,7 @@ export default {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 .container{
   display:flex;
   justify-content:center;  
@@ -187,5 +206,12 @@ export default {
   left: 50%;
   transform: translate(-50%,270%);
   background-color: #ffffff;
+=======
+.container {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+>>>>>>> 661f54c7ae7a2d61c1fb7ad4fad674c11c7f593e
 }
 </style>

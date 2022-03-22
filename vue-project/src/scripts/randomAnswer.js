@@ -33,10 +33,13 @@ function createNewStringRandomAnswer(myString, i, replaceItem) {
 function getRandomAnswer(originalAnswer) {
   let existedVars = checkExistedVars(originalAnswer);
   let randomNum = Math.floor(Math.random() * 2);
-  if (existedVars.length === 1) {
-    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    randomNum = Math.floor(Math.random() * characters.length);
-    return characters.charAt(randomNum);
+  if (originalAnswer.length === 1 || originalAnswer.length === 2) {
+    if (originalAnswer.includes("¬")) {
+      originalAnswer = originalAnswer.replace("¬", "");
+    } else {
+      originalAnswer = "¬" + originalAnswer;
+    }
+    return originalAnswer;
   }
   let answer = originalAnswer;
   randomNum = Math.floor(Math.random() * 2);
@@ -119,4 +122,4 @@ export default function returnRandomAnswer(answer, amount) {
   return randomAnswers;
 }
 
-// console.log(returnRandomAnswer("a∧d", 30));
+//console.log( returnRandomAnswer('b', 10))
