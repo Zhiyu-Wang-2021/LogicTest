@@ -2,7 +2,7 @@
   <el-progress
     type="dashboard"
     :percentage="Math.floor((100 * correct) / total)"
-    :status="Math.floor((100 * correct) / total) > 70 ? 'success' : 'exception'"
+    :status="Math.floor((100 * correct) / total) > 60 ? 'success' : 'exception'"
   >
     <template #default="{ percentage }">
       <span class="percentage-value">{{ correct }}/{{ total }} </span>

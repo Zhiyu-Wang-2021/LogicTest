@@ -1,0 +1,202 @@
+[
+  {
+    "content": "A↔B",
+    "answer": "(¬A∨B)∧(¬B∨A)"
+  },
+  {
+    "content": "A→B",
+    "answer": "¬A∨B"
+  },
+  {
+    "content": "¬¬A∨B",
+    "answer": "A∨B"
+  },
+  {
+    "content": "¬(A∧B)",
+    "answer": "¬A∨¬B"
+  },
+  {
+    "content": "¬(A∨B)",
+    "answer": "¬A∧¬B"
+  },
+  {
+    "content": "A∧(B∨C)",
+    "answer": "(A∧B)∨(A∧C)"
+  },
+  {
+    "content": "(A∧C)∨(A∧¬B)∨C",
+    "answer": "(A∧¬B)∨C"
+  },
+  {
+    "content": "(A∧(B∧¬B))∨C",
+    "answer": "A∨C"
+  },
+  {
+    "content": "(A∧C)∨(A∧¬B)∨C",
+    "answer": "(A∧¬B)∨C"
+  },
+  {
+    "content": "((P→Q)∧(Q→R))∧(R→P)",
+    "answer": "(P∧Q∧R)∨(¬P∧¬Q∧¬R)"
+  },
+  {
+    "content": "¬((P∧Q∧R)∨(¬P∧¬Q∧¬R))",
+    "answer": "(P∧Q∧¬R)∨(P∧¬Q∧R)∨(P∧¬Q∧¬R)∨(¬P∧Q∧R)∨(¬P∧Q∧¬R)∨(¬P∧¬Q∧R)"
+  },
+  {
+    "content": "¬((P∧¬Q)∨R)",
+    "answer": "(¬P∧¬R)∨(Q∧¬R)"
+  },
+  {
+    "content": "¬(P∨¬P)",
+    "answer": "(¬P∧P)"
+  },
+  {
+    "content": "(A→B)∨¬C",
+    "answer": "¬A∨B∨¬C"
+  },
+  {
+    "content": "(A↔B)∨C",
+    "answer": "((¬A∨B)∧(¬B∨A))∨C"
+  },
+  {
+    "content": "(A→B)∨(¬C→D)",
+    "answer": "¬A∨B∨C∨D"
+  },
+  {
+    "content": "(A↔B)∨(¬C→D)",
+    "answer": "((¬A∨B)∧(¬B∨A))∨C∨D"
+  },
+  {
+    "content": "(A→B)∨(¬C↔D)",
+    "answer": "¬A∨B∨((C∨D)∧(¬D∨¬C))"
+  },
+  {
+    "content": "(A↔B)∨(¬C→¬D)",
+    "answer": "((¬A∨B)∧(¬B∨A))∨C∨¬D"
+  },
+  {
+    "content": "(¬A→B)∨(¬C↔D)",
+    "answer": "A∨B∨((C∨D)∧(¬D∨¬C))"
+  },
+  {
+    "content": "(¬A↔B)∨(¬C→¬D)",
+    "answer": "((A∨B)∧(¬B∨¬A))∨C∨¬D"
+  },
+  {
+    "content": "((A→B)∧(B→C))∧(C→A)",
+    "answer": "(A∧B∧C)∨(¬A∧¬B∧¬C)"
+  },
+  {
+    "content": "((A→B)∧(B→C))∧(C→A)",
+    "answer": "(A∧B∧C)∨(¬A∧¬B∧¬C)"
+  },
+  {
+    "content": "¬((A∧B∧C)∨(¬A∧¬B∧¬C))",
+    "answer": "(A∧B∧¬C)∨(A∧¬B∧C)∨(A∧¬B∧¬C)∨(¬A∧B∧C)∨(¬A∧B∧¬C)∨(¬A∧¬B∧C)"
+  },
+  {
+    "content": "¬((A∧¬B)∨C)",
+    "answer": "(¬A∧¬C)∨(B∧¬C)"
+  },
+  {
+    "content": "¬((A∧B)∨C)",
+    "answer": "(¬A∧¬C)∨(¬B∧¬C)"
+  },
+  {
+    "content": "((P↔Q)∧B)∨C",
+    "answer": "(B∧P∧Q)∨(B∧¬P∧¬Q)∨C"
+  },
+  {
+    "content": "(P→Q)∨(¬A∧¬B∧¬C)",
+    "answer": "(¬A∧¬B∧¬C)∨¬P∨Q"
+  },
+  {
+    "content": "(¬¬P∨Q)∨(A↔B)∨(¬C→D)",
+    "answer": "(A∧B)∨(¬A∧¬B)∨C∨D∨P∨Q"
+  },
+  {
+    "content": "¬(P∧Q)∧(P∨¬P)∨¬Q",
+    "answer": "¬P∨¬Q"
+  },
+  {
+    "content": "¬(P∨Q)∧(P∨¬P)∨¬Q∨P",
+    "answer": "P∨¬Q"
+  },
+  {
+    "content": "P∧(Q∨R)",
+    "answer": "(P∧Q)∨(P∧R)"
+  },
+  {
+    "content": "(P∧R)∨(P∧¬Q)∨R",
+    "answer": "(P∧¬Q)∨R"
+  },
+  {
+    "content": "(P∧(Q∧¬Q))∨R",
+    "answer": "P∨R"
+  },
+  {
+    "content": "(P∧R)∨(P∧¬Q)∨R",
+    "answer": "(P∧¬Q)∨R"
+  },
+  {
+    "content": "P∨R∨(P∧¬Q)∨R",
+    "answer": "P∨R"
+  },
+  {
+    "content": "(P∧R)∨Q∨(P∧¬Q)∨R",
+    "answer": "P∨Q∨R"
+  },
+  {
+    "content": "(P∧R)∨(P∧¬Q)∨R∨(R∧¬Q)",
+    "answer": "(P∧¬Q)∨R"
+  },
+  {
+    "content": "¬((A∧B)∨C)∨D",
+    "answer": "(¬A∧¬C)∨(¬B∧¬C)∨D"
+  },
+  {
+    "content": "(¬¬P∨Q)∧¬R",
+    "answer": "(P∨Q)∧¬R"
+  },
+  {
+    "content": "¬((A∧B)∨C)∨(D∧B)",
+    "answer": "(¬A∧¬C)∨(B∧D)∨(¬B∧¬C)"
+  },
+  {
+    "content": "(P∨Q)∧¬(R∨Q)",
+    "answer": "P∧¬Q∧¬R"
+  },
+  {
+    "content": "(P∨Q)∧¬(R∨Q)∧¬(R∨¬P)",
+    "answer": "P∧¬Q∧¬R"
+  },
+  {
+    "content": "(P∨Q)∧¬(R∨Q)∧¬(R∨¬P)∧¬(S∨¬T)",
+    "answer": "P∧¬Q∧¬R∧¬S∧T"
+  },
+  {
+    "content": "(A↔B)∧¬(R∨Q)∧¬(R∨¬P)",
+    "answer": "(A∧B∧P∧¬Q∧¬R)∨(¬A∧¬B∧P∧¬Q∧¬R)"
+  },
+  {
+    "content": "(A↔B)∧((A∧(B∧¬B))∨C)",
+    "answer": "(¬A∨B)∧(¬B∨A)∧((A∧(B∧¬B))∨C)"
+  },
+  {
+    "content": "(A→B)∧(P↔Q)",
+    "answer": "(¬A∧P∧Q)∨(¬A∧¬P∧¬Q)∨(B∧P∧Q)∨(B∧¬P∧¬Q)"
+  },
+  {
+    "content": "(A→B)∨(¬¬P∧Q)",
+    "answer": "¬A∨B∨(P∧Q)"
+  },
+  {
+    "content": "((P→Q)∧¬(P∧Q))∨R",
+    "answer": "¬P∨R"
+  },
+  {
+    "content": "(P→Q)∧¬(R∨Q)∧¬(R∨¬P)",
+    "answer": "(¬P∨Q)∧¬(R∨Q)∧¬(R∨¬P)"
+  }
+]

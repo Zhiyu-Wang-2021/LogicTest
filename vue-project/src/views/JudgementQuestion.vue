@@ -11,7 +11,10 @@
       <el-button type="danger" @click="feedback(false)">False</el-button>
     </div>
     <div v-else-if="this.questions.length > 0">
-      <ResultProgressBar :correct="this.correctCount" :total="this.questionIndex"/>
+      <ResultProgressBar
+        :correct="this.correctCount"
+        :total="this.questionIndex"
+      />
       <el-button type="success" @click="finish">Finish</el-button>
     </div>
     <div v-else>
@@ -39,6 +42,7 @@ export default {
       answer: "",
       isCorrect: false,
       completed: false,
+      qPerPractice: 10,
     };
   },
   mounted() {
@@ -50,10 +54,45 @@ export default {
     } catch (e) {
       console.log(e.message);
     }
+    if (!localStorage.getItem("qPerPractice"))
+      localStorage.setItem("qPerPractice", 10);
+    this.qPerPractice = Math.min(
+      localStorage.getItem("qPerPractice"),
+      this.questions.length
+    );
+    this.randomizeQuestions();
     console.log(this.questions);
     this.renderValues();
   },
   methods: {
+    randomizeQuestions() {
+      let newQuestions = [];
+      let count = 0;
+      const maxCount = 50;
+      while (newQuestions.length < this.qPerPractice) {
+        let newQuestion =
+          this.questions[Math.floor(Math.random() * this.questions.length)];
+        let pass = false;
+        while (!pass) {
+          count += 1;
+          pass = true;
+          newQuestion =
+            this.questions[Math.floor(Math.random() * this.questions.length)];
+          for (let i = 0; i < newQuestions.length; i++) {
+            if (
+              count < maxCount &&
+              newQuestions[i].content === newQuestion.content
+            ) {
+              pass = false;
+              break;
+            }
+          }
+        }
+        count = 0;
+        newQuestions.push(newQuestion);
+      }
+      this.questions = newQuestions;
+    },
     renderValues() {
       if (this.questions.length > 0) {
         this.currQuestionContent = this.questions[this.questionIndex].content;
@@ -76,7 +115,7 @@ export default {
       }
     },
     corrFeedback() {
-      if (this.questionIndex < this.questions.length) {
+      if (this.questionIndex < this.qPerPractice) {
         this.correctCount += 1;
         ElMessage({
           message: `Correct! (${this.correctCount}/${this.questionIndex + 1})`,
@@ -86,8 +125,8 @@ export default {
       }
     },
     errFeedback() {
-      if (this.questionIndex < this.questions.length) {
-        ElMessage.error(`Wrong. (${this.correctCount}/${this.questionIndex})`);
+      if (this.questionIndex < this.qPerPractice) {
+        ElMessage.error(`Wrong. (${this.correctCount}/${this.questionIndex + 1})`);
         this.renderValues();
         this.nextQuestion();
       }
@@ -100,9 +139,7 @@ export default {
           confirmButtonText: "Back to home",
           cancelButtonText: "Cancel",
           type:
-            this.correctCount / this.questionIndex > 0.7
-              ? "success"
-              : "error",
+            this.correctCount / this.questionIndex > 0.6 ? "success" : "error",
         }
       )
         .then(() => {
@@ -114,7 +151,7 @@ export default {
     },
     nextQuestion() {
       this.questionIndex += 1;
-      if (this.questionIndex < this.questions.length) {
+      if (this.questionIndex < this.qPerPractice) {
         this.renderValues();
       } else {
         this.completed = true;

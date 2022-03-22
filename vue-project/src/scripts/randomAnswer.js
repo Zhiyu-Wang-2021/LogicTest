@@ -43,20 +43,27 @@ function getRandomAnswer(originalAnswer) {
 //from each other and are different from the original answer
 export default function returnRandomAnswer(answer, amount) {
   let randomAnswers = [];
-  let newAnswer;
+  let newAnswer = "";
   let pass;
+  const maxCount = 50;
+  let count = 0;
   for (let times = 0; times < amount; times++) {
-    newAnswer = getRandomAnswer(answer);
     pass = false;
     while (!pass) {
+      count += 1;
       pass = true;
-      if (randomAnswers.length > 0)
-        pass = randomAnswers.reduce((a, b) => a === newAnswer || b);
       newAnswer = getRandomAnswer(answer);
+      for (let i = 0; i < randomAnswers.length; i++) {
+        if (count <= maxCount && (randomAnswers[i] === newAnswer || answer === newAnswer)) {
+          pass = false;
+          break;
+        }
+      }
     }
+    count = 0;
     randomAnswers.push(newAnswer);
   }
   return randomAnswers;
 }
 
-// console.log(returnRandomAnswer("a∧b∧c→d", 4));
+// console.log(returnRandomAnswer("a∧d", 30));
