@@ -6,8 +6,10 @@
         :content="this.currQuestionContent"
       />
       <div class="answerArea">
-      <h2>Answer:</h2>
+      <h2>Equivalence:</h2>
       <h2>{{ this.answer }}</h2>
+      </div>
+      <div class="buttons">
       <el-button type="success" @click="feedback(true)">True</el-button>
       <el-button type="danger" @click="feedback(false)">False</el-button>
     </div>
@@ -166,12 +168,24 @@ export default {
 
 <style scoped>
 .container{
-   position: absolute;
-    left: 50%;
-    top:40%;
-    transform: translate(-50%,-50%);
+  display:flex;
+  justify-content:center;  
+  align-items:center; 
+}
+    
+.answerArea{
+  width:400px;
+  margin: 0 auto;
+  background-color: #ff0000;
+  }
 
-
-
+.buttons{
+  display:flex;
+  width:300px;
+  position: absolute;
+  justify-content:space-around; 
+  left: 50%;
+  transform: translate(-50%,270%);
+  background-color: #ffffff;
 }
 </style>
