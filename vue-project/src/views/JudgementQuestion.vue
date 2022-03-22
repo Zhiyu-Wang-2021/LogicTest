@@ -5,12 +5,13 @@
         :num="this.questionIndex + 1"
         :content="this.currQuestionContent"
       />
-      <h2>Answer: </h2>
+      <h2>Answer:</h2>
       <h2>{{ this.answer }}</h2>
-      <el-button type="success" @click="corrFeedback">True</el-button>
-      <el-button type="danger" @click="errFeedback">False</el-button>
+      <el-button type="success" @click="feedback(true)">True</el-button>
+      <el-button type="danger" @click="feedback(false)">False</el-button>
     </div>
     <div v-else-if="this.questions.length > 0">
+      <ResultProgressBar :correct="this.correctCount" :total="this.questionIndex"/>
       <el-button type="success" @click="finish">Finish</el-button>
     </div>
     <div v-else>
@@ -21,10 +22,13 @@
 
 <script setup>
 import QuestionCard from "../components/QuestionCard.vue";
+import ResultProgressBar from "../components/ResultProgressBar.vue";
 </script>
 <script>
 import { ElMessageBox, ElMessage } from "element-plus";
 import router from "../router";
+import returnRandomAnswer from "../scripts/randomAnswer";
+
 export default {
   data() {
     return {
@@ -33,6 +37,7 @@ export default {
       questionIndex: 0,
       currQuestionContent: "",
       answer: "",
+      isCorrect: false,
       completed: false,
     };
   },
@@ -46,13 +51,28 @@ export default {
       console.log(e.message);
     }
     console.log(this.questions);
-    this.setCardValues();
+    this.renderValues();
   },
   methods: {
-    setCardValues(){
+    renderValues() {
       if (this.questions.length > 0) {
         this.currQuestionContent = this.questions[this.questionIndex].content;
-        this.answer = this.questions[this.questionIndex].answer;
+        this.isCorrect = Math.random() < 0.5;
+        if (this.isCorrect) {
+          this.answer = this.questions[this.questionIndex].answer;
+        } else {
+          this.answer = returnRandomAnswer(
+            this.questions[this.questionIndex].answer,
+            1
+          )[0];
+        }
+      }
+    },
+    feedback(yourAns) {
+      if (yourAns === this.isCorrect) {
+        this.corrFeedback();
+      } else {
+        this.errFeedback();
       }
     },
     corrFeedback() {
@@ -68,7 +88,7 @@ export default {
     errFeedback() {
       if (this.questionIndex < this.questions.length) {
         ElMessage.error(`Wrong. (${this.correctCount}/${this.questionIndex})`);
-        this.setCardValues();
+        this.renderValues();
         this.nextQuestion();
       }
     },
@@ -79,7 +99,10 @@ export default {
         {
           confirmButtonText: "Back to home",
           cancelButtonText: "Cancel",
-          type: "success",
+          type:
+            this.correctCount / this.questionIndex > 0.7
+              ? "success"
+              : "error",
         }
       )
         .then(() => {
@@ -92,7 +115,7 @@ export default {
     nextQuestion() {
       this.questionIndex += 1;
       if (this.questionIndex < this.questions.length) {
-        this.setCardValues();
+        this.renderValues();
       } else {
         this.completed = true;
         this.finish();

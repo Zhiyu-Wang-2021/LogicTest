@@ -41,31 +41,22 @@ function getRandomAnswer(originalAnswer) {
 
 //This function returns an array of three answer which are different
 //from each other and are different from the original answer
-export default function returnRandomAnswer(answer) {
+export default function returnRandomAnswer(answer, amount) {
   let randomAnswers = [];
   let newAnswer;
   let pass;
-  for (let times = 0; times < 3; times++) {
+  for (let times = 0; times < amount; times++) {
     newAnswer = getRandomAnswer(answer);
     pass = false;
-    while (pass === false) {
-      if (times === 0 && newAnswer !== answer) {
-        pass = true;
-      } else if (times === 1) {
-        if (newAnswer !== randomAnswers[0] && newAnswer !== answer) {
-          pass = true;
-        }
-      } else if (times === 2) {
-        if (
-          newAnswer !== randomAnswers[0] &&
-          newAnswer !== randomAnswers[1] &&
-          newAnswer !== answer
-        ) {
-          pass = true;
-        }
-      }
+    while (!pass) {
+      pass = true;
+      if (randomAnswers.length > 0)
+        pass = randomAnswers.reduce((a, b) => a === newAnswer || b);
       newAnswer = getRandomAnswer(answer);
     }
-    randomAnswers[times] = newAnswer;
+    randomAnswers.push(newAnswer);
   }
+  return randomAnswers;
 }
+
+// console.log(returnRandomAnswer("a∧b∧c→d", 4));
