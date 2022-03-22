@@ -29,6 +29,9 @@
         <el-menu-item index="5" @click="$router.push({ name: 'help' })">
           Help
         </el-menu-item>
+        <el-menu-item index="5" @click="$router.push({ name: 'about' })">
+          About
+        </el-menu-item>
       </el-menu>
       </el-aside>
     </el-col>
@@ -36,12 +39,6 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  Location,
-  Document,
-  Menu as IconMenu,
-  Setting,
-} from '@element-plus/icons-vue'
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
