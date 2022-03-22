@@ -137,7 +137,9 @@ export default {
         );
         ElNotification({
           title: this.questions[this.questionIndex].content,
-          message: `The correct answer is ${this.questions[this.questionIndex].answer}`,
+          message: `The correct answer is ${
+            this.questions[this.questionIndex].answer
+          }`,
           duration: 0,
           type: "error",
         });
