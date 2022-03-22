@@ -5,10 +5,12 @@
         :num="this.questionIndex + 1"
         :content="this.currQuestionContent"
       />
+      <div class="answerArea">
       <h2>Answer:</h2>
       <h2>{{ this.answer }}</h2>
       <el-button type="success" @click="feedback(true)">True</el-button>
       <el-button type="danger" @click="feedback(false)">False</el-button>
+    </div>
     </div>
     <div v-else-if="this.questions.length > 0">
       <ResultProgressBar
@@ -163,8 +165,13 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  max-width: 400px;
-  margin: auto;
+.container{
+   position: absolute;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+
+
+
 }
 </style>
