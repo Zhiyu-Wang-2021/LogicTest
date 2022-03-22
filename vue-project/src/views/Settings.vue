@@ -19,12 +19,12 @@ import sampleQuestions from "../assets/sampleQuestions.json";
 export default {
   data() {
     return {
-      questionPerPractice: 10,
+      questionPerPractice: localStorage.getItem("qPerPractice") ? parseInt(localStorage.getItem("qPerPractice")) : 10,
     };
   },
   methods: {
     setQuestionsPerPractice(){
-      localStorage.setItem("qPerPractice", this.questionPerPractice)
+      localStorage.setItem("qPerPractice", this.questionPerPractice);
     },
     clearQuestionDB() {
       if (localStorage.getItem("questions")) {

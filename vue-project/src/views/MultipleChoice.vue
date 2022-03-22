@@ -127,7 +127,7 @@ export default {
     },
     errFeedback() {
       if (this.questionIndex < this.qPerPractice) {
-        ElMessage.error(`Wrong. (${this.correctCount}/${this.questionIndex})`);
+        ElMessage.error(`Wrong. (${this.correctCount}/${this.questionIndex + 1})`);
         this.renderValues();
         this.nextQuestion();
       }
