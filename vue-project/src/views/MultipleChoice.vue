@@ -152,7 +152,6 @@ export default {
         "Completed!",
         {
           confirmButtonText: "Back to home",
-          cancelButtonText: "Cancel",
           type:
             this.correctCount / this.questionIndex > 0.6 ? "success" : "error",
         }

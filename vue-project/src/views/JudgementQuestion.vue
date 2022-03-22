@@ -10,8 +10,8 @@
       <h2>{{ this.answer }}</h2>
       </div>
       <div class="buttons">
-      <el-button type="success" @click="feedback(true)">True</el-button>
-      <el-button type="danger" @click="feedback(false)">False</el-button>
+      <el-button type="success" size="large" @click="feedback(true)">True</el-button>
+      <el-button type="danger" size="large" @click="feedback(false)">False</el-button>
     </div>
     </div>
     <div v-else-if="this.questions.length > 0">
@@ -141,7 +141,7 @@ export default {
             this.questions[this.questionIndex].answer
           }`,
           duration: 0,
-          type: "error",
+          type: "message",
         });
         this.renderValues();
         this.nextQuestion();
@@ -153,7 +153,6 @@ export default {
         "Completed!",
         {
           confirmButtonText: "Back to home",
-          cancelButtonText: "Cancel",
           type:
             this.correctCount / this.questionIndex > 0.6 ? "success" : "error",
         }
@@ -198,7 +197,7 @@ export default {
   position: absolute;
   justify-content:space-around; 
   left: 50%;
-  transform: translate(-50%,270%);
+  transform: translate(-50%,230%);
   background-color: #ffffff;
 }
 </style>

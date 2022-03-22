@@ -2,7 +2,6 @@
   <el-row class="tac">
     <el-col :span="24">
       <el-aside width =1200>
-        
       <el-menu
         default-active="2"
         class="el-menu-vertical-demo"
