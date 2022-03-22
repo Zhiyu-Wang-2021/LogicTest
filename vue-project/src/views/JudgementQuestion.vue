@@ -143,7 +143,7 @@ export default {
             this.questions[this.questionIndex].answer
           }`,
           duration: 0,
-          type: "error",
+          type: "message",
         });
         this.renderValues();
         this.nextQuestion();
@@ -155,7 +155,6 @@ export default {
         "Completed!",
         {
           confirmButtonText: "Back to home",
-          cancelButtonText: "Cancel",
           type:
             this.correctCount / this.questionIndex > 0.6 ? "success" : "error",
         }
@@ -200,7 +199,7 @@ export default {
   position: absolute;
   justify-content: space-around;
   left: 50%;
-  transform: translate(-50%, 270%);
+  transform: translate(-50%,230%);
   background-color: #ffffff;
 }
 

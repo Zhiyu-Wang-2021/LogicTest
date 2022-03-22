@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <el-table :data="questions" style="width: 100%" max-height="500">
+    <div class="table">
+    <el-table :data="questions" style="width: 100%" max-height="800px">
       <el-table-column fixed prop="content" label="Question" width="400" />
       <el-table-column fixed prop="answer" label="Answer" width="400" />
       <el-table-column fixed="right" label="" width="120">
@@ -15,7 +16,9 @@
         </template>
       </el-table-column>
     </el-table>
+    </div>
     <el-button
+      type="primary"
       class="mt-4"
       style="width: 100%"
       @click="$router.push({ name: 'newQuestion' })"
@@ -90,5 +93,8 @@ export default {
 }
 .infinite-list .infinite-list-item + .list-item {
   margin-top: 10px;
+}
+.table{
+  margin-bottom: 30px;
 }
 </style>

@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    <h3>Create Questions</h3>
+    <div class="form">
     <el-form :model="form" label-width="120px">
       <!--    <el-form-item label="Question Type">-->
       <!--      <el-select v-model="form.type" placeholder="please select question type">-->
@@ -18,6 +20,7 @@
         <el-button @click="$router.back()">Cancel</el-button>
       </el-form-item>
     </el-form>
+    </div>
     <h2>Hint:</h2>
     <ul>
       <li>-&gt; means →</li>
@@ -75,7 +78,11 @@ export default {
 
 <style>
 .container {
+  padding-top: 30px;
   max-width: 920px;
   margin: auto;
+}
+.form {
+  padding: 100px;
 }
 </style>
