@@ -3,7 +3,8 @@
     type="dashboard"
     :percentage="Math.floor((100 * correct) / total)"
     :status="Math.floor((100 * correct) / total) > 60 ? 'success' : 'exception'"
-    :stroke-width="20"
+    :stroke-width="40"
+    :width="500"
   >
     <template #default="{ percentage }">
       <span class="percentage-value">{{ correct }}/{{ total }} </span>
@@ -26,18 +27,11 @@ export default {
 .percentage-value {
   display: block;
   margin-top: 10px;
-  font-size: 28px;
+  font-size: 120px;
 }
 .percentage-label {
   display: block;
   margin-top: 10px;
-  font-size: 12px;
-}
-.demo-progress .el-progress--line {
-  margin-bottom: 15px;
-  width: 350px;
-}
-.demo-progress .el-progress--circle {
-  margin-right: 15px;
+  font-size: 50px;
 }
 </style>

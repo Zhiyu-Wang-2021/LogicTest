@@ -5,19 +5,28 @@
         :num="this.questionIndex + 1"
         :content="this.currQuestionContent"
       />
-      <div class="options" >
+      <div class="options">
         <div v-for="(answer, index) in this.answers" :key="answer">
-          <div class="button"> <el-button  size="large" @click="feedback(index)" type="primary" plain>{{ answer }}</el-button>
+          <div class="button">
+            <el-button
+              size="large"
+              @click="feedback(index)"
+              type="primary"
+              plain
+              >{{ answer }}</el-button
+            >
           </div>
         </div>
-   </div>
+      </div>
     </div>
-    <div v-else-if="this.questions.length > 0">
+    <div v-else-if="this.questions.length > 0" style="padding-top: 130px">
       <ResultProgressBar
         :correct="this.correctCount"
         :total="this.questionIndex"
       />
-      <el-button type="success" @click="finish">Finish</el-button>
+      <el-button type="primary" @click="finish" style="width: 100%"
+        >Finish</el-button
+      >
     </div>
     <div v-else>
       <p>There are no question in the question database.</p>
@@ -136,9 +145,7 @@ export default {
           title: this.questions[this.questionIndex].content,
           message: `The correct answer is ${
             this.questions[this.questionIndex].answer
-          } but your answer is ${
-            this.answers[yourAnsIndex]
-          }`,
+          } but your answer is ${this.answers[yourAnsIndex]}`,
           duration: 0,
           type: "error",
         });
@@ -179,28 +186,24 @@ export default {
 
 <style scoped>
 .container {
-     
-  display:flex;
-  flex-direction: row ;
-  justify-content:center;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
   max-width: 400px;
   margin: auto;
 }
-.options{
-  display: table;
+.options {
   margin: 0 auto;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 80%;
   height: 200px;
   background-color: #ffffff;
 }
-.button{
-  width:100%;
+.button {
+  width: 100%;
   background-color: #ffffff;
 }
-
-
 </style>

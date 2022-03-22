@@ -1,25 +1,27 @@
 <template>
   <div class="container">
-    <div v-if="!this.completed && this.questions.length > 0"  align="center">
+    <div v-if="!this.completed && this.questions.length > 0">
       <QuestionCard
         :num="this.questionIndex + 1"
         :content="this.currQuestionContent"
       />
       <div class="answerArea">
-      <h2>Equivalence:</h2>
-      <h2>{{ this.answer }}</h2>
+        <h2>Equivalence:</h2>
+        <h2>{{ this.answer }}</h2>
       </div>
       <div class="buttons">
-      <el-button type="success" @click="feedback(true)">True</el-button>
-      <el-button type="danger" @click="feedback(false)">False</el-button>
+        <el-button type="success" @click="feedback(true)">True</el-button>
+        <el-button type="danger" @click="feedback(false)">False</el-button>
+      </div>
     </div>
-    </div>
-    <div v-else-if="this.questions.length > 0">
+    <div v-else-if="this.questions.length > 0" style="padding-top: 130px">
       <ResultProgressBar
         :correct="this.correctCount"
         :total="this.questionIndex"
       />
-      <el-button type="success" @click="finish">Finish</el-button>
+      <el-button type="primary" @click="finish" style="width: 100%"
+        >Finish</el-button
+      >
     </div>
     <div v-else>
       <p>There are no question in the question database.</p>
@@ -179,26 +181,30 @@ export default {
 </script>
 
 <style scoped>
-.container{
-   display:flex;
-  flex-direction: row ;
-  justify-content:center;  
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   max-width: 400px;
   margin: auto;
 }
-    
-.answerArea{
+
+.answerArea {
   margin: 0 auto;
   background-color: #ffffff;
-  }
+}
 
-.buttons{
-  display:flex;
-  width:300px;
+.buttons {
+  display: flex;
+  width: 300px;
   position: absolute;
-  justify-content:space-around; 
+  justify-content: space-around;
   left: 50%;
-  transform: translate(-50%,270%);
+  transform: translate(-50%, 270%);
   background-color: #ffffff;
+}
+
+ResultProgressBar {
+  top: 200px;
 }
 </style>
