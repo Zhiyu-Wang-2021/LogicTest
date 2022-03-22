@@ -1,19 +1,24 @@
 <template>
-  <el-form :model="form" label-width="120px">
-    <!--    <el-form-item label="Question Type">-->
-    <!--      <el-select v-model="form.type" placeholder="please select question type">-->
-    <!--        <el-option label="Judgement Question" value="judgement" />-->
-    <!--        <el-option label="Multiple Choice Question" value="multi" />-->
-    <!--      </el-select>-->
-    <!--    </el-form-item>-->
-    <el-form-item label="Your Question">
-      <el-input v-model="form.content" type="textarea" data="newQuestion" />
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="onSubmit">Create</el-button>
-      <el-button @click="$router.back()">Cancel</el-button>
-    </el-form-item>
-  </el-form>
+  <div class="container">
+    <el-form :model="form" label-width="120px">
+      <!--    <el-form-item label="Question Type">-->
+      <!--      <el-select v-model="form.type" placeholder="please select question type">-->
+      <!--        <el-option label="Judgement Question" value="judgement" />-->
+      <!--        <el-option label="Multiple Choice Question" value="multi" />-->
+      <!--      </el-select>-->
+      <!--    </el-form-item>-->
+      <el-form-item label="Question">
+        <el-input v-model="form.content" type="textarea" data="newQuestion" @change="onFormChange"/>
+      </el-form-item>
+      <el-form-item label="Answer">
+        <el-input v-model="form.answer" type="textarea" data="newQuestion" @change="onFormChange" />
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit">Create</el-button>
+        <el-button @click="$router.back()">Cancel</el-button>
+      </el-form-item>
+    </el-form>
+  </div>
 </template>
 
 <script setup>
@@ -24,12 +29,20 @@ import router from "../router";
 const form = reactive({
   // type: "",
   content: "",
+  answer: "",
 });
 
+const onFormChange = () => {
+  form.answer = strToOperation(form.answer)
+  form.content = strToOperation(form.content)
+}
+
 const onSubmit = () => {
+  onFormChange()
   const question = {
     // type: form.type,
     content: form.content,
+    answer: form.answer,
   };
   console.log(question);
   let prevQuestions = [];
@@ -45,7 +58,16 @@ const onSubmit = () => {
 </script>
 
 <script>
+import strToOperation from "../scripts/strToOperation";
+
 export default {
   name: "NewQuestion",
 };
 </script>
+
+<style>
+.container {
+  max-width: 920px;
+  margin: auto;
+}
+</style>

@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <el-table :data="questions" style="width: 100%" max-height="850">
-      <el-table-column fixed prop="content" label="Question List" width="600" />
+      <el-table-column fixed prop="content" label="Question" width="400" />
+      <el-table-column fixed prop="answer" label="Answer" width="400" />
       <el-table-column fixed="right" label="" width="120">
         <template #default="scope">
           <el-button
@@ -69,7 +70,7 @@ export default {
 
 <style>
 .container {
-  max-width: 720px;
+  max-width: 920px;
   margin: auto;
 }
 .infinite-list {

@@ -2,10 +2,10 @@
   <el-card class="box-card">
     <template #header>
       <div class="card-header">
-        <span>Question Number</span>
+        <span :key="num">{{ num }}</span>
       </div>
     </template>
-    <div class="text item">A sample question</div>
+    <div class="text item">{{ content }}</div>
   </el-card>
 </template>
 
@@ -32,5 +32,9 @@
 <script>
 export default {
   name: "QuestionCard",
+  props: {
+    num: Number,
+    content: String,
+  },
 };
 </script>

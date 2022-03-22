@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6fb0afb-e54f-4abd-b59f-e38f7708e3ee" name="Changes" comment="local storage">
+    <list default="true" id="a6fb0afb-e54f-4abd-b59f-e38f7708e3ee" name="Changes" comment="ode .">
+      <change afterPath="$PROJECT_DIR$/vue-project/src/scripts/randomAnswer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-project/src/scripts/strToOperation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/src/components/NavMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/components/NavMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-project/src/components/QuestionCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/components/QuestionCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-project/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/src/views/NewQuestion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/NewQuestion.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-project/src/views/QuestionList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/QuestionList.vue" afterDir="false" />
@@ -20,6 +22,7 @@
       <list>
         <option value="package.json" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -34,6 +37,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="74956b67-75e3-476e-a904-f69c6337eff9" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -47,13 +53,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LogicPlatform" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vue-project/src/scripts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="ts.external.directory.path" value="D:\Programming\VueTest\vue-project\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programming\LogicTest\vue-project\src\scripts" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
@@ -87,7 +98,8 @@
       <workItem from="1647750220316" duration="6641000" />
       <workItem from="1647794181989" duration="14362000" />
       <workItem from="1647869312474" duration="2360000" />
-      <workItem from="1647871978354" duration="2208000" />
+      <workItem from="1647871978354" duration="7676000" />
+      <workItem from="1647903235069" duration="7608000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1647756312330</created>
@@ -110,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647818041156</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change scroll to table&#10;allow deleting questions">
+      <created>1647874340402</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647874340402</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +160,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="demo" />
     <MESSAGE value="local storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="local storage" />
+    <MESSAGE value="change scroll to table&#10;allow deleting questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="change scroll to table&#10;allow deleting questions" />
   </component>
 </project>
