@@ -1,4 +1,5 @@
 <template>
+
   <el-menu
       :default-active="activeIndex2"
       class="el-menu-demo"
@@ -7,6 +8,7 @@
       text-color="#fff"
       active-text-color="#ffd04b"
       @select="handleSelect"
+
   >
     <el-menu-item index="1" @click="$router.push({ name: 'home' })">Home</el-menu-item>
     <el-sub-menu index="2">
@@ -32,6 +34,7 @@
     </el-menu-item>
   </el-menu>
 
+
 </template>
 
 <script lang="ts" setup>
@@ -44,3 +47,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
 </script>
+
+<style scoped>
+p{font-family:"Times New Roman", Times, serif;}
+</style>

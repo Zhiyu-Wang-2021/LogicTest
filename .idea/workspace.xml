@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6fb0afb-e54f-4abd-b59f-e38f7708e3ee" name="Changes" comment="自动转换数学符号">
-      <change afterPath="$PROJECT_DIR$/vue-project/src/components/ResultProgressBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/scripts/randomAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/scripts/randomAnswer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/views/MultipleChoice.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/MultipleChoice.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-project/src/assets/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/assets/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-project/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +103,7 @@
       <workItem from="1647871978354" duration="7676000" />
       <workItem from="1647903235069" duration="8270000" />
       <workItem from="1647939996364" duration="5329000" />
+      <workItem from="1647950742560" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1647756312330</created>
