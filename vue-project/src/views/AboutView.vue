@@ -10,7 +10,7 @@
       help them achieve it
     </p>
     <p>With careful planning, we build 'Logic Test'</p>
-    <h4>Framework and Function: Zhiyu Wang</h4>
+    <h4>Framework and Database: Zhiyu Wang</h4>
     <h4>UI Design: Ruochong Yao</h4>
     <h4>Text Content: Shoubo Yu</h4>
     <h4>Sample Question Set and Function: Hongyi Chen</h4>
