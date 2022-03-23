@@ -13,7 +13,7 @@
     <h4>Framework and Function: Zhiyu Wang</h4>
     <h4>UI Design: Ruochong Yao</h4>
     <h4>Text Content: Shoubo Yu</h4>
-    <h4>Text Content: Hongyi Chen</h4>
+    <h4>Sample Question Set and Function: Hongyi Chen</h4>
     <p>Last Update: 22/03/2022</p>
   </div>
 </template>
