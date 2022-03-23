@@ -65,7 +65,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
 }
 p,li{

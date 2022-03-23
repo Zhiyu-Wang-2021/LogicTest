@@ -62,3 +62,9 @@ export default {
 
 
 </style>
+
+<style>
+ div,body,p,span,h1,h2,h3,h4{
+   font-family: Arial, Helvetica, sans-serif;
+}
+</style>
