@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="table">
-    <el-table :data="questions" style="width: 100%" max-height="800px">
-      <el-table-column fixed prop="content" label="Question" width="400" />
+    <el-table :data="questions" style="width: 100%" max-height="770px" size="large">
+      <el-table-column fixed prop="content" label="Question" width="500" />
       <el-table-column fixed prop="answer" label="Answer" width="400" />
       <el-table-column fixed="right" label="" width="120">
         <template #default="scope">

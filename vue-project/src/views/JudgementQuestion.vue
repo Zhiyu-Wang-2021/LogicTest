@@ -142,7 +142,7 @@ export default {
           message: `The correct answer is ${
             this.questions[this.questionIndex].answer
           }`,
-          duration: 0,
+          duration: 17000,
           type: "message",
         });
         this.renderValues();

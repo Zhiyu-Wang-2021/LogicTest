@@ -1,6 +1,7 @@
 <script setup></script>
 <template>
   <div class="container">
+    <div>
     <h1><strong>Welcome to Logic Test</strong></h1>
     <p>
       This website helps 1st year undergraduate students to practice and
@@ -14,6 +15,10 @@
       For more information on how to use this website, please refer to the Help
       page.
     </p>
+    </div>
+    <div class="welcomePic">
+    <img src="..\assets\hello2.svg" /> 
+    </div>
   </div>
 </template>
 
@@ -23,6 +28,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-55%);
+}
+.welcomePic{
+  padding-top: 70px;
 }
 </style>

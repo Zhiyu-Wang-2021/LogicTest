@@ -146,7 +146,7 @@ export default {
           message: `The correct answer is ${
             this.questions[this.questionIndex].answer
           } but your answer is ${this.answers[yourAnsIndex]}`,
-          duration: 0,
+          duration: 17000,
           type: "error",
         });
         this.renderValues();

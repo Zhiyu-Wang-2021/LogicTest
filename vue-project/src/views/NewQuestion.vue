@@ -79,7 +79,7 @@ export default {
 <style>
 .container {
   padding-top: 30px;
-  max-width: 920px;
+  max-width: 900px;
   margin: auto;
 }
 .form {

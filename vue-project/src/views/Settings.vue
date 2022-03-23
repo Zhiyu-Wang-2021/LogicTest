@@ -88,3 +88,4 @@ export default {
   flex: 0 0 70%;
 }
 </style>
+
