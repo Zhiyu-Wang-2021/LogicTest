@@ -193,7 +193,7 @@ export default {
 
 .answerArea {
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #17dcff;
 }
 
 .buttons {

@@ -8,7 +8,7 @@
         @open="handleOpen"
         @close="handleClose"
       >
-      <h2 class="mb-2" style="text-align:center">Logic Test</h2>
+      <h2 class="mb-2" style="text-align:center" >Logic Test</h2>
       <el-menu-item index="1" @click="$router.push({ name: 'home' })">Home</el-menu-item>
           <el-sub-menu index="2">
             <template #title>Practice</template>
@@ -51,5 +51,9 @@ const handleClose = (key: string, keyPath: string[]) => {
   width: 240px;
   min-height: 400px;
   height: 96vh;
+}
+.mb-2{
+  color: #36343b;
+  font-family: Arial Black;
 }
 </style>
