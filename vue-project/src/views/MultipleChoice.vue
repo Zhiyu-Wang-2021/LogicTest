@@ -24,12 +24,14 @@
         :correct="this.correctCount"
         :total="this.questionIndex"
       />
-      <el-button type="primary" @click="finish" style="width: 100%"
+      <el-button type="primary" plain @click="finish" style="width: 100%" 
         >Finish</el-button
       >
     </div>
-    <div v-else>
-      <p>There are no question in the question database.</p>
+    <div v-else align="center">
+      <el-card class="box-card">
+        <div  class="text item">There are no question in the question database.</div>
+      </el-card>
     </div>
   </div>
 </template>
@@ -147,7 +149,7 @@ export default {
             this.questions[this.questionIndex].answer
           } but your answer is ${this.answers[yourAnsIndex]}`,
           duration: 17000,
-          type: "error",
+          type: "message",
         });
         this.renderValues();
         this.nextQuestion();

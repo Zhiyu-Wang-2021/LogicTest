@@ -48,6 +48,3 @@ const handleSelect = (key: string, keyPath: string[]) => {
 }
 </script>
 
-<style scoped>
-p{font-family:"Times New Roman", Times, serif;}
-</style>

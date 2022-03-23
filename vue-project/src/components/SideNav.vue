@@ -28,7 +28,7 @@
         <el-menu-item index="5" @click="$router.push({ name: 'help' })">
           Help
         </el-menu-item>
-        <el-menu-item index="5" @click="$router.push({ name: 'about' })">
+        <el-menu-item index="6" @click="$router.push({ name: 'about' })">
           About
         </el-menu-item>
       </el-menu>

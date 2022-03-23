@@ -1,9 +1,12 @@
 <template>
   <div class="container">
     <h1>Frequently Asked Questions</h1>
-    <div class="demo-collapse">
+    <div class="demo-collapse" font-size="60px">
       <el-collapse v-model="activeNames" @change="handleChange">
-        <el-collapse-item title="How to do practice:" name="1">
+        <el-collapse-item font-size="60px"  name="1">
+          <template #title font-size="60px">
+            <h2>How to do practice:</h2>
+          </template>
           <p>
             There are two kinds of questions: Judgement Questions and
             Multiple-Choice.
@@ -21,7 +24,10 @@
             </li>
           </ul>
         </el-collapse-item>
-        <el-collapse-item title="How to use Question Database:" name="2">
+        <el-collapse-item name="2">
+          <template #title font-size="60px">
+            <h2>How to use Question Database:</h2>
+          </template>
           <p>
             Questions can be added to or removed from the question database.
             When adding a new question, type in both the question and the answer
@@ -56,11 +62,16 @@ export default {
 
 <style scoped>
 .container {
-  min-width: 600px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1100px;
+  margin: auto;
+}
+p,li{
+  font-size: 17px;
+}
+.el-collapse-item__header{
+  font-size: 60;
 }
 </style>

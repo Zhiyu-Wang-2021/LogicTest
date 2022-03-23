@@ -26,10 +26,10 @@ export default {
 
 <style scoped>
 .container {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-if="!this.completed && this.questions.length > 0">
+    <div v-if="!this.completed && this.questions.length > 0" align="center">
       <QuestionCard
         :num="this.questionIndex + 1"
         :content="this.currQuestionContent"
@@ -23,8 +23,10 @@
         >Finish</el-button
       >
     </div>
-    <div v-else>
-      <p>There are no question in the question database.</p>
+    <div v-else align="center">
+      <el-card class="box-card">
+        <div  class="text item">There are no question in the question database.</div>
+      </el-card>
     </div>
   </div>
 </template>
@@ -33,6 +35,7 @@
 import QuestionCard from "../components/QuestionCard.vue";
 import ResultProgressBar from "../components/ResultProgressBar.vue";
 </script>
+
 <script>
 import { ElMessageBox, ElMessage, ElNotification } from "element-plus";
 import router from "../router";
@@ -210,4 +213,5 @@ button {
   width: 100px;
   height: 70px;
 }
+
 </style>

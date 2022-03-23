@@ -33,8 +33,4 @@
 .welcomePic{
   padding-top: 70px;
 }
-
-h1 {
-  font-size: 90px;
-}
 </style>

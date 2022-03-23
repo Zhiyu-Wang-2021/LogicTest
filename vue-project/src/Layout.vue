@@ -54,7 +54,7 @@ export default {
   top: 20px;
   left: 270px;
   bottom: 20px;
-  right: 280px; /* 距离右边0像素 */
+  right: 110px; /* 距离右边0像素 */
   padding: 10px;
   overflow-y: auto; /* 当内容过多时y轴出现滚动条 */
   background-color: #ffffff;
