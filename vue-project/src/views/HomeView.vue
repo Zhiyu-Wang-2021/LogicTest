@@ -25,4 +25,8 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
+
+h1 {
+  font-size: 90px;
+}
 </style>
