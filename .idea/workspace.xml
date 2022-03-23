@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6fb0afb-e54f-4abd-b59f-e38f7708e3ee" name="Changes" comment="style modification">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/components/ResultProgressBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/components/ResultProgressBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/views/Help.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/Help.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/HomeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/JudgementQuestion.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/views/MultipleChoice.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/MultipleChoice.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-project/src/views/Settings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/Settings.vue" afterDir="false" />
+    <list default="true" id="a6fb0afb-e54f-4abd-b59f-e38f7708e3ee" name="Changes" comment="help page update">
+      <change beforePath="$PROJECT_DIR$/vue-project/src/views/AboutView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-project/src/views/AboutView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +108,7 @@
       <workItem from="1647903235069" duration="8270000" />
       <workItem from="1647939996364" duration="5329000" />
       <workItem from="1647946218297" duration="8832000" />
-      <workItem from="1647985943881" duration="2450000" />
+      <workItem from="1647985943881" duration="7274000" />
     </task>
     <task id="LOCAL-00001" summary="demo">
       <created>1647756312330</created>
@@ -172,7 +166,28 @@
       <option name="project" value="LOCAL" />
       <updated>1647973947396</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="style modification">
+      <created>1647989221519</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1647989221519</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add about page">
+      <created>1647990335898</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1647990335898</updated>
+    </task>
+    <task id="LOCAL-00011" summary="help page update">
+      <created>1647993675239</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1647993675239</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +224,8 @@
     <MESSAGE value="help/home page内容完成&#10;增加显示答案" />
     <MESSAGE value="更新sample question" />
     <MESSAGE value="style modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="style modification" />
+    <MESSAGE value="add about page" />
+    <MESSAGE value="help page update" />
+    <option name="LAST_COMMIT_MESSAGE" value="help page update" />
   </component>
 </project>

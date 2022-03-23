@@ -199,11 +199,15 @@ export default {
   position: absolute;
   justify-content: space-around;
   left: 50%;
-  transform: translate(-50%,230%);
+  transform: translate(-50%, 100%);
   background-color: #ffffff;
 }
 
 ResultProgressBar {
   top: 200px;
+}
+button {
+  width: 100px;
+  height: 70px;
 }
 </style>
